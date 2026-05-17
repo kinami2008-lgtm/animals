@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2026 by anonymous (http://jsbin.com/litesopeci/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хвостики — Локальний притулок для тварин</title>
+<style id="jsbin-css">
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Шапка та навігаційне меню */
+header {
+  background-color: #ff9f43;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Контейнер для центрування контенту */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Стилі для секцій (блоків) */
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #ff9f43;
+  border-bottom: 2px solid #ff9f43;
+  padding-bottom: 5px;
+}
+
+/* Сітка для карток тварин */
+.animals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Сама картка тварини */
+.animal-card {
+  background: #fff3e6;
+  border: 1px solid #ffe0b2;
+  border-radius: 8px;
+  padding: 15px;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+/* Заглушка замість зображення */
+.animal-img-placeholder {
+  background-color: #ddd;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Стилізація елементів форми */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Кнопка відправки форми */
+button {
+  background-color: #ff9f43;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e68a2e;
+}
+
+/* Підвал сайту (футер) */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Притулок для тварин «Хвостики»</h1>
+    <p>Подаруй дім тому, хто надіється на диво</p>
+    <nav>
+      <a href="#about">Про нас</a>
+      <a href="#catalog">Наші вихованці</a>
+      <a href="#stories">Історії успіху</a>
+      <a href="#volunteer">Стати волонтером</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>Про наш притулок</h2>
+      <p>Ласкаво просимо до «Хвостиків»! Ми — локальний притулок, який займається порятунком, лікуванням та пошуком нових сімей для безпритульних тварин. Наша мета — зменшити кількість самотніх лапок на вулицях нашого міста та подарувати кожному хвостику люблячу родину.</p>
+    </section>
+
+    <section id="catalog">
+      <h2>Шукають дім</h2>
+      <p>Ці чудові пухнастики чекають саме на вас. Оберіть свого вірного друга:</p>
+      
+      <div class="animals-grid">
+        <div class="animal-card">
+          <div class="animal-img-placeholder">[ Фото: Песик Дружок ]</div>
+          <h3>Дружок</h3>
+          <p><strong>Вік:</strong> 1 рік</p>
+          <p><strong>Стать:</strong> Хлопчик</p>
+          <p><strong>Характер:</strong> Дуже енергійний, обожнює гратися з м'ячем, добре ладнає з дітьми та іншими собаками.</p>
+        </div>
+
+        <div class="animal-card">
+          <div class="animal-img-placeholder">[ Фото: Кішка Мурка ]</div>
+          <h3>Мурка</h3>
+          <p><strong>Вік:</strong> 6 місяців</p>
+          <p><strong>Стать:</strong> Дівчинка</p>
+          <p><strong>Характер:</strong> Спокійна, лагідна, справжня мурчалка. Полюбляє спати на колінах та створювати затишок.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories">
+      <h2>Історії успіху (Вже вдома)</h2>
+      
+      <h3>Історія Рекса: від знайдениша до охоронця</h3>
+      <p>Рекса знайшли взимку на зупинці. Він був наляканий і голодний. Але вже за місяць його забрала родина Олени. Зараз Рекс — щасливий домашній пес, який щодня дарує радість своїм господарям і вірно охороняє подвір'я.</p>
+      
+      <h3>Історія Луни: пухнасте щастя в квартирі</h3>
+      <p>Маленьке кошеня Луну зняли з дерева наші волонтери. Сьогодні вона святкує свій перший рік у квартирі Максима, де стала повноправною господаркою дивану та улюбленицею всієї родини.</p>
+    </section>
+
+    <section id="volunteer">
+      <h2>Стати волонтером</h2>
+      <p>Притулку завжди потрібна допомога! Якщо ви хочете вигулювати собак, допомагати з доглядом або фотографувати тварин, заповніть цю анкету:</p>
+      
+      <form action="#" method="post" onsubmit="alert('Дякуємо! Вашу заявку прийнято.'); return false;">
+        <div class="form-group">
+          <label for="name">Ваше ім'я та прізвище:</label>
+          <input type="text" id="name" name="name" required placeholder="Наприклад: Марія">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Номер телефону:</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+380...">
+        </div>
+
+        <div class="form-group">
+          <label for="activity">Чим ви хочете допомогти?</label>
+          <select id="activity" name="activity">
+            <option value="walk">Вигул собак</option>
+            <option value="care">Догляд та прибирання</option>
+            <option value="photo">Фотозйомка тварин для сайту</option>
+            <option value="auto">Автоволонтерство (транспортування)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Про себе (кілька слів):</label>
+          <textarea id="message" name="message" rows="4" placeholder="Розкажіть про свій досвід спілкування з тваринами..."></textarea>
+        </div>
+
+        <button type="submit">Надіслати заявку</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Притулок «Хвостики». Зроблено з любов'ю до тварин.</p>
+  </footer>
+
+</body>
+</html>
